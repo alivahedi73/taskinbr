@@ -1,6 +1,77 @@
 @import "../../styles/responsive.scss";
-.navbar{
-    width: 100%;
-    height: auto;
-    background-color: red;
+$color1: #7b2869;
+$color2: #9d3c72;
+$color3: #c85c8e;
+$color4: #ffbaba;
+.nav {
+  width: 100%;
+  height: auto;
+  box-shadow: 5px 5px 25px #2b2b2b6e;
+  background-color: white;
+  .nav__active{
+    background-color: $color1;
+    transition: all 0.6s linear;
+  }
+  &__main {
+    width: 95%;
+    height: 100px;
+    background-color: white;
+    max-width: 1750px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.6s linear;
+    &__sec1 {
+      width: 40%;
+      height: auto;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding-inline: 5rem;
+      &__img {
+        width: 180px;
+      }
+    }
+    &__sec2 {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__itemactive{
+        color: $color4!important;
+        transition: all 0.3s linear;
+      }
+      &__item {
+        width: max-content;
+        height: 100%;
+        padding-inline: 1rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: clamp(11px, 1vw, 16px);
+        font-weight: 700;
+        color: $color1;
+        transition: all 0.3s linear;
+      }
+      &__divsvg {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__svg {
+          width: 100%!important;
+          height: 100%!important;
+          color: $color4;
+          transition: color 0.3s linear;
+          cursor: pointer;
+          &:hover{
+            color: $color1;
+          }
+        }
+      }
+    }
+  }
 }
